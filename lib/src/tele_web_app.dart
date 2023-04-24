@@ -90,6 +90,8 @@ class TeleWebApp extends JsObjectWrapper<tele.WebAppJsImpl> {
   /// This method is only available for Web Apps launched via a
   /// [Keyboard button](https://core.telegram.org/bots/webapps#keyboard-button-web-apps).
   void sendData(String data) => jsObject.sendData(data);
+  void openLink(String link) => jsObject.openLink(link);
+  void openTelegramLink(String link) => jsObject.openTelegramLink(link);
 
   /// Informs the Telegram app that the Web App is ready to be displayed.
   ///
