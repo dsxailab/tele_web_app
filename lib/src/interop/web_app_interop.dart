@@ -30,6 +30,7 @@ abstract class WebAppJsImpl {
   external void sendData(String data);
   external void openLink(String text);
   external void openTelegramLink(String text);
+  external void showAlert(String text);
   external void ready();
   external void expand();
   external void close();

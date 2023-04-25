@@ -92,6 +92,7 @@ class TeleWebApp extends JsObjectWrapper<tele.WebAppJsImpl> {
   void sendData(String data) => jsObject.sendData(data);
   void openLink(String link) => jsObject.openLink(link);
   void openTelegramLink(String link) => jsObject.openTelegramLink(link);
+  void showAlert(String text) => jsObject.showAlert(text);
 
   /// Informs the Telegram app that the Web App is ready to be displayed.
   ///
