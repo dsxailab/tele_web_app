@@ -5,6 +5,8 @@ library web_app;
 
 import 'package:js/js.dart';
 
+import 'package:tele_web_app/open_link_options.dart';
+
 external WebAppJsImpl get WebApp;
 
 @JS()
@@ -28,7 +30,7 @@ abstract class WebAppJsImpl {
   external void onEvent(String eventType, void Function() eventHandler);
   external void offEvent(String eventType, void Function() eventHandler);
   external void sendData(String data);
-  external void openLink(String text);
+  external void openLink(String text, OpenLinkOptions? options);
   external void openTelegramLink(String text);
   external void showAlert(String text);
   external void ready();

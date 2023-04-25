@@ -1,4 +1,5 @@
 import 'package:js/js.dart' show allowInterop;
+import 'package:tele_web_app/open_link_options.dart';
 
 import 'package:tele_web_app/src/interop/js_object_wrapper.dart';
 import 'package:tele_web_app/src/interop/web_app_interop.dart' as tele;
@@ -90,8 +91,15 @@ class TeleWebApp extends JsObjectWrapper<tele.WebAppJsImpl> {
   /// This method is only available for Web Apps launched via a
   /// [Keyboard button](https://core.telegram.org/bots/webapps#keyboard-button-web-apps).
   void sendData(String data) => jsObject.sendData(data);
-  void openLink(String link) => jsObject.openLink(link);
+
+  /// open hyper link
+  void openLink(String link, OpenLinkOptions? options) =>
+      jsObject.openLink(link, options);
+
+  /// open telegram link that starts with https://t.me inside tg
   void openTelegramLink(String link) => jsObject.openTelegramLink(link);
+
+  /// show alert popup
   void showAlert(String text) => jsObject.showAlert(text);
 
   /// Informs the Telegram app that the Web App is ready to be displayed.
